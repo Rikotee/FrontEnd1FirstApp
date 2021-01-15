@@ -7,12 +7,15 @@ const ListItem = (props) => {
   return (
     <TouchableOpacity style={styles.container}>
       <View style={styles.row}>
-        <View style={styles.imagebox}>
-          <Image
-            style={{width: 100, height: 100}}
-            source={{uri: props.singleMedia.thumbnails.w160}}
-          />
+        <View style={styles.shadow}>
+          <View style={styles.imagebox}>
+            <Image
+              style={{width: 100, height: 100}}
+              source={{uri: props.singleMedia.thumbnails.w160}}
+            />
+          </View>
         </View>
+
         <View style={styles.textbox}>
           <Text style={styles.listTile}>{props.singleMedia.title}</Text>
           <Text style={styles.texts}>{props.singleMedia.description}</Text>
@@ -35,6 +38,15 @@ const styles = StyleSheet.create({
     borderRadius: 9,
     borderWidth: 3,
     borderColor: 'grey',
+  },
+  shadow: {
+    shadowColor: 'black',
+    shadowOpacity: 0.26,
+    shadowRadius: 80,
+    elevation: 9,
+    width: 110,
+    height: 100,
+    borderRadius: 50,
   },
   imagebox: {
     flex: 1,

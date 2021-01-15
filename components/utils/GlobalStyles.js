@@ -14,6 +14,11 @@ export default StyleSheet.create({
     backgroundColor: 'lightgrey',
     height: '100%',
     paddingTop: 0,
+    shadowColor: 'black',
+    shadowOpacity: 0.26,
+    shadowOffset: {width: 0, height: 2},
+    shadowRadius: 10,
+    elevation: 3,
   },
   header: {
     height: 250,
